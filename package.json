@@ -1,0 +1,19 @@
+{
+  "name": "adfsusermappingapi",
+  "version": "0.1.0",
+  "description": "ADFS User mapping API that accepts a username, and returns the mapped association for UPN.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmhardison/adfsusermappingapi.git"
+  },
+  "author": "Jonathan Hardison <jmh@jonathanhardison.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jmhardison/adfsusermappingapi/issues"
+  },
+  "homepage": "https://github.com/jmhardison/adfsusermappingapi#readme"
+}
