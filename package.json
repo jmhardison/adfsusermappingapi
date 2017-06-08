@@ -4,16 +4,48 @@
   "description": "ADFS User mapping API that accepts a username, and returns the mapped association for UPN.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm run build && node --inspect-brk ./dist/server.js",
+    "build": "babel src -s -D -d dist --presets es2015,stage-0",
+    "start": "pm2 start dist",
+    "prestart": "npm run -s build",
+    "lint": "eslint src"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jmhardison/adfsusermappingapi.git"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module"
+    },
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "no-console": 0,
+      "no-unused-vars": 1
+    }
   },
   "author": "Jonathan Hardison <jmh@jonathanhardison.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jmhardison/adfsusermappingapi/issues"
   },
-  "homepage": "https://github.com/jmhardison/adfsusermappingapi#readme"
+  "homepage": "https://github.com/jmhardison/adfsusermappingapi#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.10.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^3.19.0",
+    "nodemon": "^1.11.0"
+  }
 }
