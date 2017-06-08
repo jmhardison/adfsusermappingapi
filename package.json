@@ -8,7 +8,7 @@
     "dev": "npm run build && node ./dist/server.js",
     "devvscode": "npm run build && node --nolazy --inspect=5858 ./dist/server.js",
     "build": "babel src -s -D -d dist --presets es2015,stage-0",
-    "start": "pm2 start dist",
+    "start": "node ./dist/server.js",
     "prestart": "npm run -s build",
     "lint": "eslint src"
   },
