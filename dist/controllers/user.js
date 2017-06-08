@@ -35,12 +35,16 @@ exports.default = function (_ref) {
                 res.status(500).send(err);
             }
 
-            _user2.default.findById(altid[0].user, function (err, user) {
-                if (err) {
-                    res.status(500).send(err);
-                }
-                res.status(200).send(user.realid);
-            });
+            if (typeof altid !== "undefined" && altid.length > 0) {
+                _user2.default.findById(altid[0].user, function (err, user) {
+                    if (err) {
+                        res.status(500).send(err);
+                    }
+                    res.status(200).send(user.realid);
+                });
+            } else {
+                res.status(200).send(req.params.altemail);
+            }
         });
     });
 
