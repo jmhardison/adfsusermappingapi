@@ -9,7 +9,7 @@
     "devvscode": "npm run build && node --nolazy --inspect=5858 ./dist/server.js",
     "build": "babel src -s -D -d dist --presets es2015,stage-0",
     "start": "node ./dist/server.js",
-    "prestart": "npm install babel-cli -S && npm run -s build",
+    "prestart": "npm install --dev && npm run -s build",
     "lint": "eslint src"
   },
   "repository": {
