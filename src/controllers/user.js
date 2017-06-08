@@ -22,7 +22,7 @@ export default({ config, db}) => {
                 res.status(500).send(err);
             }
 
-            if((altid != null) && (typeof altid !== "undefined")){
+            if(typeof altid !== "undefined"){
                 User.findById(altid[0].user, (err, user) =>{
                     if(err){
                         res.status(500).send(err);
