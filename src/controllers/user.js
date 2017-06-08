@@ -22,12 +22,17 @@ export default({ config, db}) => {
                 res.status(500).send(err);
             }
 
-            User.findById(altid[0].user, (err, user) =>{
-                if(err){
-                    res.status(500).send(err);
-                }
-                res.status(200).send(user.realid);
-            });
+            if((altid != null) && (typeof altid !== "undefined")){
+                User.findById(altid[0].user, (err, user) =>{
+                    if(err){
+                        res.status(500).send(err);
+                    }
+                    res.status(200).send(user.realid);
+                });
+            }
+            else{
+                res.status(200).send(req.params.altemail);
+            }
             
         }) 
     });
