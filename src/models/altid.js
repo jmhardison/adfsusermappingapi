@@ -7,7 +7,7 @@ let AltidSchema = new Schema({
         type: String,
         required: true
     },
-    realid: {
+    user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
         required: true

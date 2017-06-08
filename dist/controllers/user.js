@@ -28,13 +28,49 @@ exports.default = function (_ref) {
 
     var api = (0, _express.Router)();
 
-    // general get from alternate email address input
-    api.get('/:altemail', function (req, res) {
+    // general get from alternate email address input  
+    api.get('/altid/email/:altemail', function (req, res) {
         _altid2.default.find({ email: req.params.altemail }, function (err, altid) {
             if (err) {
                 res.status(500).send(err);
             }
-            res.send(altid.realid);
+
+            _user2.default.findById(altid[0].user, function (err, user) {
+                if (err) {
+                    res.status(500).send(err);
+                }
+                res.status(200).send(user.realid);
+            });
+        });
+    });
+
+    // general get from alternate email by id
+    api.get('/altid/:id', function (req, res) {
+        _altid2.default.findById(req.params.id, function (err, altid) {
+            if (err) {
+                res.status(500).send(err);
+            }
+            res.status(200).send(altid.realid);
+        });
+    });
+
+    // general get from real email address input
+    api.get('/email/:realemail', function (req, res) {
+        _user2.default.find({ realid: req.params.realemail }, function (err, user) {
+            if (err) {
+                res.status(500).send(err);
+            }
+            res.status(200).json(user);
+        });
+    });
+
+    // general get from real email address input with ID
+    api.get('/:id', function (req, res) {
+        _user2.default.findById(req.params.realemail, function (err, user) {
+            if (err) {
+                res.status(500).send(err);
+            }
+            res.status(200).json(user);
         });
     });
 
@@ -52,20 +88,26 @@ exports.default = function (_ref) {
     });
 
     // general post to stage some alt id's
-    api.post('/altid/:realemail', function (req, res) {
-        _user2.default.find({ realid: req.params.realemail }, function (err, user) {
+    api.post('/altid/:realid', function (req, res) {
+        _user2.default.findById(req.params.realid, function (err, user) {
             if (err) {
                 res.status(500).send(err);
             }
             var newAltID = new _altid2.default();
             newAltID.email = req.body.email;
-            newAltID.realid = user.id;
+            newAltID.user = user.id;
 
-            newAltID.save(function (err) {
+            newAltID.save(function (err, altid) {
                 if (err) {
                     res.status(500).send(err);
                 }
-                res.status(200).json({ message: "Alt ID created successfully" });
+                user.altids.push(newAltID);
+                user.save(function (err) {
+                    if (err) {
+                        res.status(500).send(err);
+                    }
+                    res.status(200).json({ message: "Alt ID created successfully" });
+                });
             });
         });
     });
