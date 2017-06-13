@@ -45,6 +45,7 @@
     "detect-indent": "^5.0.0",
     "eslint": "^3.19.0",
     "invariant": "^2.2.2",
+    "jsesc": "^2.5.1",
     "json5": "^0.5.1",
     "to-fast-properties": "^2.0.0",
     "trim-right": "^1.0.1"
