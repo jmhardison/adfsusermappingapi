@@ -36,10 +36,14 @@ exports.default = function (_ref) {
             }
 
             if (typeof altid !== "undefined" && altid.length > 0) {
+                res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
                 _user2.default.findById(altid[0].user, function (err, user) {
                     if (err) {
                         res.status(500).send(err);
                     }
+
                     res.status(200).send(user.realid);
                 });
             } else {
