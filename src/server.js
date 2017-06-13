@@ -20,6 +20,8 @@ app.use(bodyParser.json({
     limit: config.bodyLimit
 }));
 
+app.use(allowCrossDomain);
+
 // all routes and versions in routes //
 app.use('/', routes);
 
