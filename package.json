@@ -44,6 +44,7 @@
     "concat-map": "0.0.1",
     "eslint": "^3.19.0",
     "invariant": "^2.2.2",
+    "json5": "^0.5.1",
     "to-fast-properties": "^2.0.0"
   },
   "devDependencies": {
