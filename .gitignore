@@ -1,3 +1,9 @@
+#dist folder
+dist
+
+#vscode
+.vscode
+
 # Logs
 logs
 *.log
