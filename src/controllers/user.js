@@ -24,6 +24,8 @@ export default({ config, db}) => {
 
             if((typeof altid !== "undefined") && (altid.length > 0)){
                 //adding CORS here, but need to refactor the middleware to support it with Next()
+                //when calling to this endpoint through ADFS, this must be set or it will be rejected unless you place
+                //the api service behind the same fqdn as your ADFS server.
                 res.header("Access-Control-Allow-Origin", "*");
                 res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
                 
