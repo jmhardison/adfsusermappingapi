@@ -1,4 +1,4 @@
-# adfsusermappingapi
+# ADFS User Mapping API
 ADFS User Mapping API backend for returning a UPN of input value. (Proof of Concept)
 
 This tool was quickly put together to prove the concept of altering a user account that is entered into a username field in the ADFS portal authenticaiton, and transforming it into a different ID.
@@ -12,7 +12,6 @@ This API is built using:
 * Express
 * Mongoose
 
-The envVariables.env file can be used to supply environment variables to Visual Studio Code during exectution. This file is ignored in .gitignore.
 
 ## DEPLOYMENT
 The API service is a simple NodeJS API, that relies on the existance of MongoDB. You can deploy through Heroku, Azure, or any other mechanism, and provide the following environment variables to drive aspects of the service.
