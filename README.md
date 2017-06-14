@@ -19,7 +19,7 @@ The API service is a simple NodeJS API, that relies on the existance of MongoDB.
 * `PORT` - The port you want the API to listen on. Heroku defines this for you, but other services will require it set.
 * `MONGOSTRING` - The connection string for mongo service.
 
-Changes to ADFS require the creation of a custom theme and the import of a modified onload.js file. (to be added to repo soon)
+Changes to ADFS require the creation of a custom theme and the import of a modified onload.js file.
 
 ## GET REAL ID FROM ALT ID
 
