@@ -1,5 +1,7 @@
 # ADFS User Mapping API
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jmhardison/adfsusermappingapi.svg)](https://greenkeeper.io/)
+
 ADFS User Mapping API backend for returning a UPN of input value. (Proof of Concept)
 
 This tool was quickly put together to prove the concept of altering a user account that is entered into a username field in the ADFS portal authenticaiton, and transforming it into a different ID.
