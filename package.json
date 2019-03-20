@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm run build && node ./dist/server.js",
     "devvscode": "npm run build && node --nolazy --inspect=5858 ./dist/server.js",
-    "build": "babel src -s -D -d dist --presets es2015,stage-0",
+    "build": "babel src -s -D -d dist --presets env,stage-0",
     "start": "node ./dist/server.js",
     "prestart": "npm run -s build",
     "lint": "eslint src",
@@ -38,11 +38,12 @@
   },
   "homepage": "https://github.com/jmhardison/adfsusermappingapi#readme",
   "dependencies": {
+    "lodash": ">=4.17.11",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.3",
-    "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
     "concat-map": "0.0.1",
     "detect-indent": "^5.0.0",
     "eslint": "^4.18.2",
@@ -54,17 +55,18 @@
     "snyk": "^1.124.1"
   },
   "devDependencies": {
+    "lodash": ">=4.17.11",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-helpers": "^6.24.1",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1",
     "body-parser": "^1.18.3",
     "eslint": "^4.18.2",
-    "express": "^4.16.3",
-    "mongoose": "^5.3.7",
-    "nodemon": "^1.18.3"
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19",
+    "nodemon": "^1.18.10"
   },
   "snyk": true
 }
