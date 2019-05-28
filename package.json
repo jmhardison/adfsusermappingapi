@@ -52,7 +52,7 @@
     "json5": "^0.5.1",
     "to-fast-properties": "^2.0.0",
     "trim-right": "^1.0.1",
-    "snyk": "^1.124.1"
+    "snyk": "^1.167.2"
   },
   "devDependencies": {
     "lodash": ">=4.17.11",
