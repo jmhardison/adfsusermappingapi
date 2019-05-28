@@ -49,7 +49,7 @@
     "eslint": "^5.16.0",
     "invariant": "^2.2.2",
     "jsesc": "^2.5.1",
-    "json5": "^0.5.1",
+    "json5": "^2.1.0",
     "to-fast-properties": "^2.0.0",
     "trim-right": "^1.0.1",
     "snyk": "^1.167.2"
