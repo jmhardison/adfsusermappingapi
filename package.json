@@ -45,7 +45,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "concat-map": "0.0.1",
-    "detect-indent": "^5.0.0",
+    "detect-indent": "^6.0.0",
     "eslint": "^5.16.0",
     "invariant": "^2.2.2",
     "jsesc": "^2.5.1",
