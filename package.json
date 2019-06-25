@@ -46,7 +46,7 @@
     "babel-preset-env": "^1.7.0",
     "concat-map": "0.0.1",
     "detect-indent": "^6.0.0",
-    "eslint": "^5.16.0",
+    "eslint": "^6.0.1",
     "invariant": "^2.2.2",
     "jsesc": "^2.5.1",
     "json5": "^2.1.0",
@@ -63,7 +63,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1",
     "body-parser": "^1.19.0",
-    "eslint": "^5.16.0",
+    "eslint": "^6.0.1",
     "express": "^4.17.1",
     "mongoose": "^5.6.0",
     "nodemon": "^1.19.1"
