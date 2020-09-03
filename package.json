@@ -43,7 +43,7 @@
     "invariant": "^2.2.2",
     "jsesc": "^2.5.1",
     "json5": "^2.1.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.17",
     "snyk": "^1.274.1",
     "to-fast-properties": "^3.0.1",
     "trim-right": "^1.0.1"
